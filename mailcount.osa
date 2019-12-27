@@ -1,0 +1,9 @@
+tell application "Mail"
+    set myAccount to "iCloud"
+    set mailboxList to {"INBOX"}
+    set messageCount to 0
+    repeat with _mailbox in mailboxList
+        set messageCount to messageCount + (count of messages in mailbox _mailbox of account myAccount)
+    end repeat
+    get messageCount
+end tell
