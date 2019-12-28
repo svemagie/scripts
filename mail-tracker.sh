@@ -17,11 +17,11 @@ CURRENTDATE=`Date +"%Y-%m-%d"`
 echo "INBOX Stats Analysis for ${CURRENTDATETIME}"
 
 # Counts 
-mail_count=`osascript mailcount.osa`
+mail_count=`osascript /Users/sven/bin/mailcount.osa`
 
 # Save stats as new line with date to local csv
 echo ${CURRENTDATE}, $mail_count >> $DATA_FILE
 
 # Optional for Mac
 # uncomment to send a mac notification message
-#osascript -e 'display notification "Successfully counted mails logged stats." with title "Daily INBOX Stats Saved"'
+#osascript -e 'display notification "Successfully counted mails and logged stats." with title "Daily INBOX Stats Saved"'
