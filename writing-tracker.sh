@@ -107,7 +107,7 @@ echo "References: added " $refs_added, "deleted " $refs_deleted
 #done
 
 # Save stats as new line with date to local csv
-echo ${YESTERDAY}, ${CURRENTDATETIME}, $total_files, $files_changed, $files_added, $files_modified, $files_deleted, $files_renamed, $words_added, $words_deleted, $words_duplicated, $hashtags_added, $hashtags_added, $hashtags_deleted, $refs_added, $refs_deleted >> $DATA_FILE
+echo ${YESTERDAY}, ${CURRENTDATETIME}, $total_files, $files_changed, $files_added, $files_modified, $files_deleted, $files_renamed, $words_added, $words_deleted, $words_duplicated, $hashtags_added, $hashtags_deleted, $refs_added, $refs_deleted >> $DATA_FILE
 
 # Commit Changes to Git with Custom Message
 commit_msg=("$YESTERDAY Daily Writing Stats: Words Added: $words_added, Files Added: $files_added")

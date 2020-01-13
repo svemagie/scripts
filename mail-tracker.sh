@@ -14,7 +14,7 @@ DATA_FILE="/Users/sven/Documents/Projekte/quantified_sven/data/mails-stats.csv"
 CURRENTDATE=`Date +"%Y-%m-%d"`
 
 # Run our analysis and post to some log messages. 
-echo "INBOX Stats Analysis for ${CURRENTDATETIME}"
+echo "INBOX Stats Analysis for ${CURRENTDATE}"
 
 # Counts 
 mail_count=`osascript /Users/sven/bin/mailcount.osa`
@@ -24,4 +24,4 @@ echo ${CURRENTDATE}, $mail_count >> $DATA_FILE
 
 # Optional for Mac
 # uncomment to send a mac notification message
-#osascript -e 'display notification "Successfully counted mails and logged stats." with title "Daily INBOX Stats Saved"'
+osascript -e 'display notification "Successfully counted mails and logged stats." with title "Daily INBOX Stats Saved"'
