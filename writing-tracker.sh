@@ -47,7 +47,7 @@
 # COPIED_DIR="/Users/markkoester/Development/bash/the_archive_writings_tracking_repo/"
 # Name of Directory with files we will be tracking
 #TARGET_DIR=/Users/markkoester/Library/Mobile' 'Documents/9CR7T2DMDG~com~ngocluu~onewriter/Documents/Archive/
-TARGET_DIR="/Users/sven/Documents/Projekte/Notes (The Archive)"
+TARGET_DIR="/Users/sven/Documents/Projekte/notes"
 
 # Name of daily stats file
 DATA_FILE="/Users/sven/Documents/Projekte/quantified_sven/data/writing-notes-stats.csv"
