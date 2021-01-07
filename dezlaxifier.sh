@@ -32,6 +32,7 @@ declare -a SPAMMERS=(
 	"jlumpkins@pod.dapor.net"
 	"jlumpkins@podbay.net"
 	"hackbyte@diaspora.club"
+	"owlmagic@pod.tchncs.de"
 	)
 
 ####################################
