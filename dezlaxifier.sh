@@ -33,6 +33,8 @@ declare -a SPAMMERS=(
 	"jlumpkins@podbay.net"
 	"hackbyte@diaspora.club"
 	"owlmagic@pod.tchncs.de"
+        "kennychaffin@pod.tchncs.de"
+        "mrd_ill_be_back@pod.tchncs.de"
 	)
 
 ####################################
