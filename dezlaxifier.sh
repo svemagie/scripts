@@ -35,6 +35,7 @@ declare -a SPAMMERS=(
 	"owlmagic@pod.tchncs.de"
         "kennychaffin@pod.tchncs.de"
         "mrd_ill_be_back@pod.tchncs.de"
+        "vm666@diasporing.ch"
 	)
 
 ####################################
