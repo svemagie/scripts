@@ -3,29 +3,20 @@
 #
 # WRITING TRACKER
 #
-# More Info at https://github.com/markwk/writing-tracker
-#
-# add line like this which runs at 1am daily:
-# 00  1  *  *  * /path/to/bash/archive-daily-git-commit.bash
-#
-##################################
-# CONFIGURATION
-#
-# Uncomment and set your target directories.
-#
-# ARCHIVE_DIR=/Users/markkoester/Library/Mobile' 'Documents/9CR7T2DMDG~com~ngocluu~onewriter/Documents/Notes_TheArchive/
-# COPIED_DIR="/Users/markkoester/Development/bash/the_archive_writings_tracking_repo/"
 # Name of Directory with files we will be tracking
-TARGET_DIR="/home/mawe/Projekte/chibatsu-sven"
+TARGET_DIR="$HOME/Projekte/chibatsu-sven"
 
 # Name of daily stats file
-DATA_FILE="/home/mawe/Projekte/quantified_sven/data/writing-blog-chi-sven-stats.csv"
+DATA_FILE="$HOME/Projekte/quantified_sven/data/track-blog-chi-sven.csv"
 #
 ##################################
 
 CURRENTDATETIME=`date +"%Y-%m-%d %T"`
 CURRENTDATE=`date +"%Y-%m-%d"`
-YESTERDAY=`date --date="yesterday" +"%Y-%m-%d"`
+# Linux format
+#YESTERDAY=`date --date="yesterday" +"%Y-%m-%d"`
+# Mac format
+YESTERDAY=`date -v-1d +%F`
 
 # Copy files from current directory into repo
 # Uncomment to remove copying
@@ -38,7 +29,7 @@ cd "$TARGET_DIR"
 git add .
 
 # Run our analysis and post to some log messages. 
-echo "Writing Stats Analysis for ${CURRENTDATETIME}"
+echo "Blogging Stats Analysis for Chibatsu/Sven at ${CURRENTDATETIME}"
 
 # File Counts 
 total_files="$(ls -1q * | wc -l | tr -d '[:space:]')"
@@ -79,7 +70,7 @@ echo "References: added " $refs_added, "deleted " $refs_deleted
 echo ${YESTERDAY}, ${CURRENTDATETIME}, $total_files, $files_changed, $files_added, $files_modified, $files_deleted, $files_renamed, $words_added, $words_deleted, $words_duplicated, $hashtags_added, $hashtags_deleted, $refs_added, $refs_deleted >> $DATA_FILE
 
 # Commit Changes to Git with Custom Message
-commit_msg=("$YESTERDAY Daily Writing Stats: Words Added: $words_added, Files Added: $files_added")
+commit_msg=("$YESTERDAY Daily Blogging Stats for Chibatsu/Svemagie: Words Added: $words_added, Files Added: $files_added")
 echo $commit_msg
 # uncomment after testing
 git commit -m "$commit_msg"
@@ -88,7 +79,7 @@ git push origin master
 
 # Optional for Mac
 # uncomment to send a mac notification message
-#osascript -e 'display notification "Successfully copied writing files and logged stats into git." with title "Yesterday Daily Writing Stats Saved"'
+#osascript -e 'display notification "Successfully copied writing files and logged stats into git." with title "Yesterday Daily Blogging Stats for Chibatsu/svemagie Saved"'
 
 # FUTURE TODO: [Possible] Curl to save stats to a google sheet or another tracking api
 # SEE: https://productforums.google.com/forum/#!topic/docs/18vuCI8Me10

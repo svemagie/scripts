@@ -3,28 +3,20 @@
 #
 # WRITING TRACKER
 #
-# More Info at https://github.com/markwk/writing-tracker
-#
-# 00  1  *  *  * /path/to/bash/archive-daily-git-commit.bash
-#
-##################################
-# CONFIGURATION
-#
-# Uncomment and set your target directories.
-#
-# ARCHIVE_DIR=/Users/markkoester/Library/Mobile' 'Documents/9CR7T2DMDG~com~ngocluu~onewriter/Documents/Notes_TheArchive/
-# COPIED_DIR="/Users/markkoester/Development/bash/the_archive_writings_tracking_repo/"
 # Name of Directory with files we will be tracking
-TARGET_DIR="/home/mawe/Projekte/chibatsu.net"
+TARGET_DIR="$HOME/Projekte/notes/"
 
 # Name of daily stats file
-DATA_FILE="/home/mawe/Projekte/quantified_sven/data/writing-blog-chi-stats.csv"
+DATA_FILE="$HOME/Projekte/quantified_sven/data/track-writing-notes.csv"
 #
 ##################################
 
 CURRENTDATETIME=`date +"%Y-%m-%d %T"`
 CURRENTDATE=`date +"%Y-%m-%d"`
-YESTERDAY=`date --date="yesterday" +"%Y-%m-%d"`
+# Linux format
+#YESTERDAY=`date --date="yesterday" +"%Y-%m-%d"`
+# Mac format
+YESTERDAY=`date -v-1d +%F`
 
 # Copy files from current directory into repo
 # Uncomment to remove copying
@@ -87,7 +79,7 @@ git push origin master
 
 # Optional for Mac
 # uncomment to send a mac notification message
-#osascript -e 'display notification "Successfully copied writing files and logged stats into git." with title "Yesterday Daily Writing Stats Saved"'
+osascript -e 'display notification "Successfully copied writing files and logged stats into git." with title "Yesterday Daily Writing Stats Saved"'
 
 # FUTURE TODO: [Possible] Curl to save stats to a google sheet or another tracking api
 # SEE: https://productforums.google.com/forum/#!topic/docs/18vuCI8Me10

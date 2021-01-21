@@ -10,18 +10,22 @@
 # for further quantifiedself tracking
 
 # Name of daily stats file
-DATA_FILE="/Users/sven/Documents/Projekte/quantified_sven/data/mails-stats.csv"
-CURRENTDATE=`Date +"%Y-%m-%d"`
+DATA_FILE="$HOME/Projekte/quantified_sven/data/track-mails.csv"
+CURRENTDATE=`date +"%Y-%m-%d"`
+# Linux format
+#YESTERDAY=`date --date="yesterday" +"%Y-%m-%d"`
+# Mac format
+#YESTERDAY=`date -v-1d +%F`
 
 # Run our analysis and post to some log messages. 
 echo "INBOX Stats Analysis for ${CURRENTDATE}"
 
 # Counts 
-mail_count=`osascript /Users/sven/bin/mailcount.osa`
+mail_count=`osascript $HOME/bin/mailcount.osa`
 
 # Save stats as new line with date to local csv
 echo ${CURRENTDATE}, $mail_count >> $DATA_FILE
 
 # Optional for Mac
 # uncomment to send a mac notification message
-osascript -e 'display notification "Successfully counted mails and logged stats." with title "Daily INBOX Stats Saved"'
+#osascript -e 'display notification "Successfully counted mails and logged stats." with title "Daily INBOX Stats Saved"'
