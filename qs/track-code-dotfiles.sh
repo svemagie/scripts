@@ -7,8 +7,8 @@
 TARGET_DIR="$HOME/Projekte/dotfiles/"
 
 # Name of daily stats file
-DATA_FILE="$HOME/Projekte/quantified_sven/data/track-code-dotfiles.csv"
-#
+DATA_FILE="$HOME/data/writing/track-code-dotfiles.csv"
+
 ##################################
 
 CURRENTDATETIME=`date +"%Y-%m-%d %T"`

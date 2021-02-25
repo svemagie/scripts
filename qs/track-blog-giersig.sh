@@ -7,8 +7,8 @@
 TARGET_DIR="$HOME/Projekte/giersig.eu"
 
 # Name of daily stats file
-DATA_FILE="$HOME/Projekte/quantified_sven/data/track-blog-giersig.csv"
-#
+DATA_FILE="$HOME/data/writing/track-blog-giersig.csv"
+
 ##################################
 
 CURRENTDATETIME=`date +"%Y-%m-%d %T"`

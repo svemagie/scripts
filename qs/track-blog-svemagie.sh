@@ -4,10 +4,10 @@
 # WRITING TRACKER
 #
 # Name of Directory with files we will be tracking
-TARGET_DIR="$HOME/Projekte/web/chibatsu-sven"
+TARGET_DIR="$HOME/Projekte/web/svemagie.net"
 
 # Name of daily stats file
-DATA_FILE="$HOME/data/writing/track-blog-chi-sven.csv"
+DATA_FILE="$HOME/data/writing/track-blog-svemagie.csv"
 #
 ##################################
 
@@ -29,7 +29,7 @@ cd "$TARGET_DIR"
 git add .
 
 # Run our analysis and post to some log messages. 
-echo "Blogging Stats Analysis for Chibatsu/Sven at ${CURRENTDATETIME}"
+echo "Blogging Stats Analysis for svemagie.net at ${CURRENTDATETIME}"
 
 # File Counts 
 total_files="$(ls -1q * | wc -l | tr -d '[:space:]')"
@@ -70,7 +70,8 @@ echo "References: added " $refs_added, "deleted " $refs_deleted
 echo ${YESTERDAY}, ${CURRENTDATETIME}, $total_files, $files_changed, $files_added, $files_modified, $files_deleted, $files_renamed, $words_added, $words_deleted, $words_duplicated, $hashtags_added, $hashtags_deleted, $refs_added, $refs_deleted >> $DATA_FILE
 
 # Commit Changes to Git with Custom Message
-commit_msg=("$YESTERDAY Daily Blogging Stats for Chibatsu/Svemagie: Words Added: $words_added, Files Added: $files_added")
+commit_msg=("$YESTERDAY Daily Blogging Stats for svemagie: Words Added: $words_added, Files Added: $files_added")
+
 echo $commit_msg
 # uncomment after testing
 git commit -m "$commit_msg"

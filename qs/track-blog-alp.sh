@@ -4,11 +4,11 @@
 # WRITING TRACKER
 #
 # Name of Directory with files we will be tracking
-TARGET_DIR="$HOME/Projekte/alptraum"
+TARGET_DIR="$HOME/Projekte/web/alptraum"
 
 # Name of daily stats file
-DATA_FILE="$HOME/Projekte/quantified_sven/data/track-blog-alp.csv"
-#
+DATA_FILE="$HOME/data/writing/track-blog-alp.csv"
+
 ##################################
 
 CURRENTDATETIME=`date +"%Y-%m-%d %T"`

@@ -10,8 +10,9 @@
 # for further quantifiedself tracking
 
 # Name of daily stats file
-DATA_FILE="$HOME/Projekte/quantified_sven/data/track-mails.csv"
+DATA_FILE="$HOME/data/writing/track-sys-mails.csv"
 CURRENTDATE=`date +"%Y-%m-%d"`
+
 # Linux format
 #YESTERDAY=`date --date="yesterday" +"%Y-%m-%d"`
 # Mac format

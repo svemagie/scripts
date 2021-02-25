@@ -4,7 +4,7 @@
 # DOWNLOAD TRACKER
 
 TARGET_DIR="$HOME/Downloads"
-DATA_FILE="$HOME/Projekte/quantified_sven/data/track-sys-downloads.csv"
+DATA_FILE="$HOME/data/writing/track-sys-downloads.csv"
 
 CURRENTDATETIME=`date +"%Y-%m-%d %T"`
 CURRENTDATE=`date +"%Y-%m-%d"`

@@ -4,11 +4,11 @@
 # WRITING TRACKER
 #
 # Name of Directory with files we will be tracking
-TARGET_DIR="$HOME/Projekte/chibatsu.net"
+TARGET_DIR="$HOME/Projekte/web/chibatsu.net"
 
 # Name of daily stats file
-DATA_FILE="$HOME/Projekte/quantified_sven/data/track-blog-chi.csv"
-#
+DATA_FILE="$HOME/data/writing/track-blog-chi.csv"
+
 ##################################
 
 CURRENTDATETIME=`date +"%Y-%m-%d %T"`
