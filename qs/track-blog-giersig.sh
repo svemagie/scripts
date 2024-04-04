@@ -4,7 +4,7 @@
 # WRITING TRACKER
 #
 # Name of Directory with files we will be tracking
-TARGET_DIR="$HOME/Projekte/giersig.eu"
+TARGET_DIR="$HOME/PARA/2. Areas/Technik & Programmierung/web/giersig.eu"
 
 # Name of daily stats file
 DATA_FILE="$HOME/data/writing/track-blog-giersig.csv"
@@ -75,11 +75,12 @@ echo $commit_msg
 # uncomment after testing
 git commit -m "$commit_msg"
 # uncomment to then push changes to remote repo
-git push origin master
+#git push origin master
+git push
 
 # Optional for Mac
 # uncomment to send a mac notification message
-#osascript -e 'display notification "Successfully copied writing files and logged stats into git." with title "Yesterday Daily Blogging Stats for Giersig Saved"'
+osascript -e 'display notification "Successfully copied writing files and logged stats into git." with title "Yesterday Daily Blogging Stats for Giersig Saved"'
 
 # FUTURE TODO: [Possible] Curl to save stats to a google sheet or another tracking api
 # SEE: https://productforums.google.com/forum/#!topic/docs/18vuCI8Me10

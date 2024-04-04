@@ -21,4 +21,4 @@ echo "Files: $total_files"
 #echo ${YESTERDAY}, ${CURRENTDATETIME}, $total_files >> $DATA_FILE
 echo ${CURRENTDATE}, $total_files >> $DATA_FILE
 
-#osascript -e 'display notification "Successfully Downloads logged stats." with title "Yesterday Downloads Stats Saved"'
+osascript -e 'display notification "Successfully Downloads logged stats." with title "Yesterday Downloads Stats Saved"'

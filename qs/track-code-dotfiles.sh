@@ -4,7 +4,7 @@
 # WRITING TRACKER
 #
 # Name of Directory with files we will be tracking
-TARGET_DIR="$HOME/Projekte/dotfiles/"
+TARGET_DIR="$HOME/PARA/2. Areas/Technik & Programmierung/dotfiles"
 
 # Name of daily stats file
 DATA_FILE="$HOME/data/writing/track-code-dotfiles.csv"
@@ -70,16 +70,16 @@ echo "References: added " $refs_added, "deleted " $refs_deleted
 echo ${YESTERDAY}, ${CURRENTDATETIME}, $total_files, $files_changed, $files_added, $files_modified, $files_deleted, $files_renamed, $words_added, $words_deleted, $words_duplicated, $hashtags_added, $hashtags_deleted, $refs_added, $refs_deleted >> $DATA_FILE
 
 # Commit Changes to Git with Custom Message
-commit_msg=("$YESTERDAY Daily Coding Stats: Words Added: $words_added, Files Added: $files_added")
+commit_msg=("$YESTERDAY Daily dotfiles Coding Stats: Words Added: $words_added, Files Added: $files_added")
 echo $commit_msg
 # uncomment after testing
 git commit -m "$commit_msg"
 # uncomment to then push changes to remote repo
-git push origin master
+git push 
 
 # Optional for Mac
 # uncomment to send a mac notification message
-#osascript -e 'display notification "Successfully copied writing files and logged stats into git." with title "Yesterday Daily Coding Stats Saved"'
+osascript -e 'display notification "Successfully copied writing files and logged stats into git." with title "Yesterday Daily Coding Stats Saved"'
 
 # FUTURE TODO: [Possible] Curl to save stats to a google sheet or another tracking api
 # SEE: https://productforums.google.com/forum/#!topic/docs/18vuCI8Me10
