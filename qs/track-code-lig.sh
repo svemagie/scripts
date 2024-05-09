@@ -4,10 +4,10 @@
 # WRITING TRACKER
 #
 # Name of Directory with files we will be tracking
-TARGET_DIR="$HOME/Library/CloudStorage/GoogleDrive-pr.giersig@gmail.com/Meine Ablage/PARA/2. Areas/Technik & Programmierung/dotfiles"
+TARGET_DIR="$HOME/Library/CloudStorage/GoogleDrive-pr.giersig@gmail.com/Meine Ablage/PARA/2. Areas/LRA/Code/LIG"
 
 # Name of daily stats file
-DATA_FILE="$HOME/Library/CloudStorage/GoogleDrive-pr.giersig@gmail.com/Meine Ablage/data/writing/track-code-dotfiles.csv"
+DATA_FILE="$HOME/Library/CloudStorage/GoogleDrive-pr.giersig@gmail.com/Meine Ablage/data/writing/track-code-lig.csv"
 
 ##################################
 
@@ -70,12 +70,12 @@ echo "References: added " $refs_added, "deleted " $refs_deleted
 echo ${YESTERDAY}, ${CURRENTDATETIME}, $total_files, $files_changed, $files_added, $files_modified, $files_deleted, $files_renamed, $words_added, $words_deleted, $words_duplicated, $hashtags_added, $hashtags_deleted, $refs_added, $refs_deleted >> $DATA_FILE
 
 # Commit Changes to Git with Custom Message
-commit_msg=("$YESTERDAY Daily dotfiles Coding Stats: Words Added: $words_added, Files Added: $files_added")
+commit_msg=("$YESTERDAY Daily Quantified Coding Stats LIG: Words Added: $words_added, Files Added: $files_added")
 echo $commit_msg
 # uncomment after testing
 git commit -m "$commit_msg"
 # uncomment to then push changes to remote repo
-git push 
+git push origin master
 
 # Optional for Mac
 # uncomment to send a mac notification message

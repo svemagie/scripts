@@ -4,10 +4,10 @@
 # WRITING TRACKER
 #
 # Name of Directory with files we will be tracking
-TARGET_DIR="$HOME/Projekte/scripts"
+TARGET_DIR="$HOME/Library/CloudStorage/GoogleDrive-pr.giersig@gmail.com/Meine Ablage/PARA/2. Areas/Technik & Programmierung/scripts"
 
 # Name of daily stats file
-DATA_FILE="$HOME/data/writing/track-code-scripts.csv"
+DATA_FILE="$HOME/Library/CloudStorage/GoogleDrive-pr.giersig@gmail.com/Meine Ablage/data/writing/track-code-scripts.csv"
 
 ##################################
 

@@ -10,7 +10,7 @@
 # for further quantifiedself tracking
 
 # Name of daily stats file
-DATA_FILE="$HOME/data/writing/track-sys-mails.csv"
+DATA_FILE="$HOME/Library/CloudStorage/GoogleDrive-pr.giersig@gmail.com/Meine Ablage/data/writing/track-sys-mails.csv"
 CURRENTDATE=`date +"%Y-%m-%d"`
 
 # Linux format

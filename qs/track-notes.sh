@@ -10,7 +10,7 @@ TARGET_DIR="$HOME/Memex"
 #TARGET_DIR="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/LYT"
 
 # Name of daily stats file
-DATA_FILE="$HOME/data/writing/track-writing-notes.csv"
+DATA_FILE="$HOME/Library/CloudStorage/GoogleDrive-pr.giersig@gmail.com/Meine Ablage/data/writing/track-writing-notes.csv"
 
 ##################################
 
